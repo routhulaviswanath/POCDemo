@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="POCDemo.HomeMasterPage"
+    xmlns:local="clr-namespace:POCDemo">
+    <MasterDetailPage.Master>
+        <ContentPage Title="Menu" BackgroundColor="#533F95" Icon="hamburger.png">
+            <StackLayout Orientation="Vertical" Spacing="2">
+                <StackLayout BackgroundColor="#533F95" HeightRequest="170" Spacing="15" Orientation="Horizontal" Padding="40,0,40,0">
+                    <Image x:Name="imgProfile" VerticalOptions="CenterAndExpand"  HeightRequest="60" WidthRequest="60"/>
+                    <Label x:Name="lblUserName" VerticalOptions="CenterAndExpand" Text="POC" FontSize="15" TextColor="White" FontAttributes="Bold"/>
+                </StackLayout>
+                   <ListView x:Name="navigationDrawerList" RowHeight="60" SeparatorVisibility="None" BackgroundColor="Transparent" ItemSelected="OnMenuItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid VerticalOptions="FillAndExpand" BackgroundColor="Transparent" Padding="20,10,40,10" ColumnSpacing="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="Auto"/>
+                                    </Grid.ColumnDefinitions>
+                                   <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="Medium" VerticalOptions="Center" HorizontalOptions="StartAndExpand" TextColor="White" Font="20"/>
+                                    <Image Source="{Binding Icon}" Grid.Column="1"  Rotation="180" HeightRequest="60" WidthRequest="60" VerticalOptions="Center" HorizontalOptions="CenterAndExpand"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

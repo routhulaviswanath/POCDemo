@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:POCDemo"
+    x:Class="POCDemo.Views.ChartPage" 
+    xmlns:microChart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    Title="Marcket Cap Chart" 
+    BackgroundColor="#533F95"> 
+    <ScrollView VerticalOptions="FillAndExpand">
+    <Grid VerticalOptions="FillAndExpand" Padding="5,25,5,5" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Text="Back" FontSize="20" Margin="15,10,10,10" TextColor="White" FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="LblBakTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <microChart:ChartView x:Name="lineChart" Grid.Row="1" BackgroundColor="White" HeightRequest="230"/> 
+           <Label Text="Line Chart" FontSize="20" Grid.Row="2" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"/>
+            <microChart:ChartView x:Name="donutChart" Grid.Row="3" BackgroundColor="White" HeightRequest="230"/> 
+            <Label Text="Donut Chart" FontSize="20" Grid.Row="4" HorizontalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"/>
+        </Grid>
+    </ScrollView>
+</ContentPage>   

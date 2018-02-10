@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="POCDemo.Views.UserLogin"
+    BackgroundColor="#533F95">
+    <StackLayout VerticalOptions="FillAndExpand" Padding="40,80,40,40">
+        <Label Text="LoginPage" FontAttributes="Bold" HorizontalOptions="Center" FontSize="25" TextColor="White"/>
+        <Button Text="FaceBook" VerticalOptions="CenterAndExpand" HeightRequest="50" TextColor="White"  FontAttributes="Bold" BackgroundColor="Transparent" BorderColor="White" BorderRadius="20" BorderWidth="0.4" Clicked="btnFBClick" />
+    </StackLayout>
+</ContentPage>

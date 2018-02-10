@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>  
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:POCDemo"
+    x:Class="POCDemo.Views.MarketCapChart" 
+    xmlns:microChart="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+    Title="Select any Item for Chart" 
+    BackgroundColor="#533F95"> 
+     <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand">
+            <ListView x:Name="listView" HasUnevenRows="true" BackgroundColor="#533F95">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding percent_change_1h}" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding percent_change_24h}" Grid.Column="1" HorizontalOptions="CenterAndExpand"  TextColor="White"/>
+                                <Label Text="{Binding percent_change_7d}" Grid.Column="2" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+             <ActivityIndicator x:Name="loaderShow" Color="White" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>   

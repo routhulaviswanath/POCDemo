@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="POCDemo.Views.HomePage" Title="HomePage">
+	<ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand">
+            <ListView x:Name="listView" HasUnevenRows="true" BackgroundColor="#533F95">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Padding="10">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding name}" TextColor="White" HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding symbol}" Grid.Column="1" HorizontalOptions="CenterAndExpand"  TextColor="White"/>
+                                <Label Text="{Binding rank}" Grid.Column="2" HorizontalOptions="CenterAndExpand" TextColor="White"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+             <ActivityIndicator x:Name="loaderShow" Color="White" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

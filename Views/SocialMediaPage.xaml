@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="POCDemo.Views.SocialMediaPage" Title="Social Media Login Page"
+    BackgroundColor="#533F95">
+    <ContentPage.Content>
+        <Grid VerticalOptions="FillAndExpand" BackgroundColor="Transparent" Padding="5,15,5,5" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Label Text="Back" FontSize="20" Margin="10" TextColor="White" FontAttributes="Bold">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer
+                    Tapped="LblBakTapped"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <WebView x:Name="webAccess" Grid.Row="1" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" VerticalOptions="FillAndExpand"/>
+             <ActivityIndicator x:Name="loaderShow" Grid.Row="1" Color="#FF00FF" HeightRequest="20" WidthRequest="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

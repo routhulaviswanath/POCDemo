@@ -1,0 +1,19 @@
+﻿<Properties StartupConfiguration="{426B3F1D-8B45-4B03-83EB-8927EA73D0BA}|Default">
+  <MonoDevelop.Ide.ItemProperties.POCDemo.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.3DC46C14-23BD-47B7-B2C6-4882BF63F5F8">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.POCDemo.iOS>
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/DependencyServices/IClearCookiesImplementation.cs">
+    <Files>
+      <File FileName="Views/HomeMasterPage.xaml.cs" Line="38" Column="64" />
+      <File FileName="iOS/DependencyServices/IClearCookiesImplementation.cs" Line="16" Column="1" />
+      <File FileName="Droid/DependencyServices/IClearCookiesImplementation.cs" Line="15" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.POCDemo.Droid PreferredExecutionTarget="Android.Nexus_5X_API_23" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>
